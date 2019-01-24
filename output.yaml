@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Baseline Lambda Nodejs
+Resources:
+  BaselineLambda:
+    Properties:
+      CodeUri: s3://bishound-develop-sam/3c4915da7d2096e947b503230cf84d03
+      FunctionName: BaselineLambda
+      Handler: index.handler
+      Runtime: nodejs6.10
+      Timeout: 60
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
